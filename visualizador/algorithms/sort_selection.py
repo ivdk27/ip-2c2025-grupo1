@@ -19,33 +19,33 @@ def init(vals):
 
 def step():
      global items, n, i, j, min_idx, fase
-     if fase=="buscar" and i!=n:
+     for i in range(i,n+1):
+      for j in range(j,n+1):
+       if fase=="buscar" and i!=n:
          if j==n:
                 fase="swap"
-                return {"done": False}
+                return {"swap": False, "done": False}
          if items[min_idx]>items[j]:
-                 min_idx=j
-                 j_actual=j
-                 j=j+1
-                 fase="swap"
-                 return {"a": min_idx, "b": j_actual, "swap": False, "done": False}
+                  min_idx=j
+                  j_actual=j
+                  j=j+1
+                
+                  return {"a": min_idx, "b": j_actual, "swap": False, "done": False}
       
-     if fase=="swap":
-      a=min_idx
-      b=i
-      if min_idx!=i:
+       if fase=="swap":
+        a=min_idx
+        b=i
+        if min_idx!=i:
           a=i
           b=min_idx
-          temp = items[a]
-          items[a] = items[b]
-          items[b] = temp
-      i=i+1
-      j=i+1
-      min_idx=i
-      fase="buscar"
-      return {"a": a, "b": b, "swap": True, "done": False}
+          items[a], items[b] = items[b], items[a]
+        i=i+1
+        j=i+1
+        min_idx=i
+        fase="buscar"
+        return {"a": a, "b": b, "swap": True, "done": False}
      
-     if i==n:
+      if items[i]==items[n]:
          return {"done": True}
     
          
