@@ -15,6 +15,9 @@ def init(vals):
 def step():
     global items, n, i, j
 
+    if i >= n - 1:
+        return {"done": True}
+    
     a = j
     b = j + 1
     swap = False
@@ -35,5 +38,3 @@ def step():
         "swap": swap,
         "done": False
     }
-    if i >= n - 1:
-        return {"done": True}
