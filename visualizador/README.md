@@ -24,3 +24,8 @@ Existen múltiples estrategias (Bubble, Selection, Insertion, Quick, Merge, Shel
 - Selection Sort
 - Quick Sort
 - Shell Sort
+---
+
+- Se dividieron dos algoritmos por miembro del grupo. Gabriel Segovia se encargo de implementar Bubble Sort e Insertion Sort, Iván Vazquez se encargo de implementar Selection Sort y Quick Sort.
+- Luego de decidir quien se encargaria de cada algoritmo, se investigo respecto a los mismos. Cuando se lograba que el algoritmo funcione correctamente, se subia al repo para que el otro miembro del grupo pueda verificarlo.
+- Despues de implementar los algoritmos iniciales, Iván Vazquez se encargo de implementar Shell Sort guiandose por el Insertion Sort ya implementado.
