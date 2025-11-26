@@ -1,7 +1,7 @@
 # Template genérico — SKELETON
 # Contrato: init(vals), step() -> {"a": int, "b": int, "swap": bool, "done": bool}
 
-iitems = []
+items = []
 n = 0
 gap = 0
 i = 0
